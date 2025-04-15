@@ -1,3 +1,7 @@
+html{
+    transition: background-color 0.3 ease, color 0.3 ease;
+}
+
 #blog-header {
     font-size: 2.25rem !important;
 }
@@ -29,7 +33,7 @@
 
 /* Light-dark mode CSS */
 
-.icon {
+/* .icon {
     height: 1rem;
     width: 1rem;
     fill: currentColor;
@@ -59,4 +63,4 @@
 
 .bt-mode-toggle .dropdown-menu .active .icon {
     display: block !important;
-}
+} */
