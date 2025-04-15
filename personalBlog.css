@@ -1,0 +1,28 @@
+#blog-header {
+    font-size: 2.25rem !important;
+}
+
+#intro-image{
+    min-height: 50vh;
+    background: url(./images/personal-photo.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#outdoors-image{
+    background: url(./images/outdoors.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#programming-image{
+    background: url(./images/programming.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#cooking-image{
+    background: url(./images/cooking.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
