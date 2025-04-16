@@ -53,3 +53,24 @@ article.active {
 .full-story{
     display: none;
 }
+
+/* Cooking */
+
+.recipe-border:active{
+    background-color: beige;
+}
+
+.card{
+    min-height: 18vw !important;
+    max-height: 18vw !important;
+}
+
+.card-img-top{
+    min-height: 10vw !important;
+    max-height: 10vw !important;
+}
+
+.card-text{
+    text-indent: 2ch;
+}
+
