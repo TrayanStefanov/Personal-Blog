@@ -74,3 +74,10 @@ article.active {
     text-indent: 2ch;
 }
 
+.full-recipe{
+    display: none !important;
+}
+
+.full-recipe:active{
+    display: flex !important;
+}
