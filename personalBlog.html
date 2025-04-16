@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="./personalBlog.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-        <script src="/docs/5.3/assets/js/color-modes.js"></script>
     <title>Temp Name</title>
 
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <div class="form-check form-switch top-0 end-0 me-2 mt-2 position-fixed">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked
+            aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Switch between light and dark mode">
+        <label class="form-check-label" for="darkModeSwitch" id="darkModeSwitch-texts">Dark Mode</label>
+    </div>
+    
+    <!-- Drop down toggle snipet. Needs a revisit -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -32,12 +39,7 @@
             <path
                 d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
         </symbol>
-    </svg>
-    <div class="form-check form-switch bottom-0 end-0 me-2 mb-2 position-fixed">
-        <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
-        <label class="form-check-label" for="darkModeSwitch" id="darkModeSwitch-texts">Dark Mode</label>
-    </div>
-    <!-- Drop down toggle snipet. Needs a revisit -->
+    </svg> -->
     <!-- <div class="dropdown bottom-0 end-0 me-2 mb-2 position-fixed bt-mode-toggle">
         <button class="btn btn-custom-primary py-3 dropdown-toggle d-flex align-items-center" id="bt-theme" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
             <svg class="icon my-1 theme-icon-active" aria-hidden="true">
@@ -94,19 +96,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">About</a>
+                                <a class="nav-link active" data-nav-link>About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Outdoors</a>
+                                <a class="nav-link" data-nav-link>Outdoors</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Programming</a>
+                                <a class="nav-link" data-nav-link>Programming</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cooking</a>
+                                <a class="nav-link" data-nav-link>Cooking</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contacts</a>
+                                <a class="nav-link" data-nav-link>Contacts</a>
                             </li>
                         </ul>
                     </div>
@@ -115,122 +117,145 @@
         </div>
     </div>
     <main class="container">
-        <div class="row bg-body-secondary rounded-4 text-body-emphasis p-3 mb-3">
-            <div class="col-lg-7">
-                <h1 class="display-4 fst-italic">Welcome to Trayo's world</h1>
-                <p class="text-break my-3 lead">Hey there! I’m Trayan — 30 years old, curious by nature, and always
-                    chasing
-                    the next thing that sparks my interest. This blog is my little corner of the internet where I share
-                    the
-                    things I’m passionate about — from hobbies I’m diving into, to thoughts, ideas, and everything in
-                    between.
 
-                    Whether it’s exploring new tech, diving into creative projects, or just enjoying the simple things
-                    in
-                    life, this space is all about what excites and inspires me. Thanks for stopping by — hope you find
-                    something here that clicks with you too.
+        <!-- Landing about me page -->
+        <article class="about" data-page="about">
+            <div class="row bg-body-secondary rounded-4 text-body-emphasis p-3 mb-3">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fst-italic">Welcome to Trayo's world</h1>
+                    <p class="text-break my-3 lead">Hey there! I’m Trayan — 30 years old, curious by nature, and always
+                        chasing
+                        the next thing that sparks my interest. This blog is my little corner of the internet where I
+                        share
+                        the
+                        things I’m passionate about — from hobbies I’m diving into, to thoughts, ideas, and everything
+                        in
+                        between.
 
-                </p>
-                <!-- <p class="mb-0 lead">
+                        Whether it’s exploring new tech, diving into creative projects, or just enjoying the simple
+                        things
+                        in
+                        life, this space is all about what excites and inspires me. Thanks for stopping by — hope you
+                        find
+                        something here that clicks with you too.
+
+                    </p>
+                    <!-- <p class="mb-0 lead">
                 <a href="#" class="text-body-emphasis fw-bold">Continue reading...</a>
             </p> -->
+                </div>
+                <div class="col-lg-5 img-container">
+                    <div id="intro-image" class="h-100 mh-100"></div>
+                </div>
             </div>
-            <div class="col-lg-5 img-container">
-                <div id="intro-image" class="h-100 mh-100"></div>
+            <div class="row p-3 d-flex flex-row justify-content-between border border-end-0 border-2"
+                id="outdoors-container">
+                <div class="col-lg-6 border-end border-2">
+                    <div id="outdoors-image" class="h-100 mh-100 rounded-4"></div>
+                </div>
+                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
+                    <h1 class="display-6 fst-italic">🌄 The Outdoors: Where I Feel Most Alive</h1>
+                    <p class="text-break my-3 fw-light fs-6">
+                        There’s something about being out in nature that resets everything — the
+                        mind, the body, the soul. For me, the outdoors isn't just a hobby, it's a way of reconnecting
+                        with
+                        what
+                        really matters. Whether I’m hiking through quiet forest trails or trekking across rugged
+                        terrainthat’s
+                        when I feel the most at peace.
+                    </p>
+                    <p class="text-break my-3 fw-light fs-6">
+                        This section of the blog is all about those experiences. I’ll be sharing trail stories, mountain
+                        adventures, gear I’ve used, lessons learned (sometimes the hard way), and the raw beauty that
+                        makes
+                        every challenge worth it. If you’re into hiking, trekking — or just curious about
+                        stepping into the wild — you’re in the right place.
+                    </p>
+                    <p class="mb-0 fw-light fs-6">
+                        <a href="#" class="text-body-emphasis fw-bold">Let’s expore the outside!</a>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row p-3 d-flex flex-row justify-content-between border border-end-0 border-2"
-            id="outdoors-container">
-            <div class="col-lg-6 border-end border-2">
-                <div id="outdoors-image" class="h-100 mh-100 rounded-4"></div>
-            </div>
-            <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                <h1 class="display-6 fst-italic">🌄 The Outdoors: Where I Feel Most Alive</h1>
-                <p class="text-break my-3 fw-light fs-6">
-                    There’s something about being out in nature that resets everything — the
-                    mind, the body, the soul. For me, the outdoors isn't just a hobby, it's a way of reconnecting with
-                    what
-                    really matters. Whether I’m hiking through quiet forest trails or trekking across rugged
-                    terrainthat’s
-                    when I feel the most at peace.
-                </p>
-                <p class="text-break my-3 fw-light fs-6">
-                    This section of the blog is all about those experiences. I’ll be sharing trail stories, mountain
-                    adventures, gear I’ve used, lessons learned (sometimes the hard way), and the raw beauty that makes
-                    every challenge worth it. If you’re into hiking, trekking — or just curious about
-                    stepping into the wild — you’re in the right place.
-                </p>
-                <p class="mb-0 fw-light fs-6">
-                    <a href="#" class="text-body-emphasis fw-bold">Let’s expore the outside!</a>
-                </p>
-            </div>
-        </div>
-        <div class="row p-3 d-flex flex-row-reverse justify-content-between border-end border-2"
-            id="programming-container">
-            <div class="col-lg-6 border-start border-2">
-                <div id="programming-image" class="h-100 mh-100 rounded-4"></div>
-            </div>
-            <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                <h1 class="display-6 fst-italic">💻 Code & Creativity: Building for an Easier Tomorow
-                </h1>
-                <p class="text-break my-3 fw-light fs-6">
-                    When I’m not out exploring nature, I’m probably deep in code — turning ideas
-                    into digital tools that make life a little easier. Programming has always been more than just logic
-                    and
-                    syntax for me — it’s a creative outlet, a problem-solving mindset, and honestly, kind of addictive
-                    in
-                    the best way.
-                </p>
-                <p class="text-break my-3 fw-light fs-6">
+            <div class="row p-3 d-flex flex-row-reverse justify-content-between border-end border-2"
+                id="programming-container">
+                <div class="col-lg-6 border-start border-2">
+                    <div id="programming-image" class="h-100 mh-100 rounded-4"></div>
+                </div>
+                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
+                    <h1 class="display-6 fst-italic">💻 Code & Creativity: Building for an Easier Tomorow
+                    </h1>
+                    <p class="text-break my-3 fw-light fs-6">
+                        When I’m not out exploring nature, I’m probably deep in code — turning ideas
+                        into digital tools that make life a little easier. Programming has always been more than just
+                        logic
+                        and
+                        syntax for me — it’s a creative outlet, a problem-solving mindset, and honestly, kind of
+                        addictive
+                        in
+                        the best way.
+                    </p>
+                    <p class="text-break my-3 fw-light fs-6">
 
-                    I’m especially into web development and mobile apps — creating things that are not only functional
-                    but
-                    actually help in day-to-day life. Whether it’s a small script that saves time, a full-blown app, or
-                    just
-                    a random experiment that turns into something useful, this space is where I share that side of my
-                    world.
-                </p>
-                <p class="text-break my-3 fw-light fs-6">
-                    If you’re into tech, building cool stuff, or just like seeing how code can improve the little things
-                    in
-                    life — this is the spot.
-                </p>
-                <p class="mb-0 fw-light fs-6">
-                    <a href="#" class="text-body-emphasis fw-bold">Let's dive into the matrix-></a>
-                </p>
+                        I’m especially into web development and mobile apps — creating things that are not only
+                        functional
+                        but
+                        actually help in day-to-day life. Whether it’s a small script that saves time, a full-blown app,
+                        or
+                        just
+                        a random experiment that turns into something useful, this space is where I share that side of
+                        my
+                        world.
+                    </p>
+                    <p class="text-break my-3 fw-light fs-6">
+                        If you’re into tech, building cool stuff, or just like seeing how code can improve the little
+                        things
+                        in
+                        life — this is the spot.
+                    </p>
+                    <p class="mb-0 fw-light fs-6">
+                        <a href="#" class="text-body-emphasis fw-bold">Let's dive into the matrix-></a>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row p-3 mb-3 d-flex flex-row justify-content-between border border-end-0 border-2"
-            id="cooking-container">
-            <div class="col-lg-6 border-end border-2">
-                <div id="cooking-image" class="h-100 mh-100 rounded-4"></div>
+            <div class="row p-3 mb-3 d-flex flex-row justify-content-between border border-end-0 border-2"
+                id="cooking-container">
+                <div class="col-lg-6 border-end border-2">
+                    <div id="cooking-image" class="h-100 mh-100 rounded-4"></div>
+                </div>
+                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
+                    <h1 class="display-6 fst-italic">🍰 Sweet Side of Life: Baking, Pastry & Dessert</h1>
+                    <p class="text-break my-3 fw-light fs-6">
+                        When the hiking boots are off and the code editor is closed, you’ll probably
+                        find me in the kitchen, covered in flour and chasing that perfect bake. Cooking is my way of
+                        slowing
+                        down — and baking, in particular, is where I really get into the zone. There's something
+                        incredibly
+                        satisfying about turning simple ingredients into something that brings comfort, joy, or just a
+                        really
+                        good sugar rush.
+                    </p>
+                    <p class="text-break my-3 fw-light fs-6">
+                        This part of the blog is dedicated to all things sweet — from flaky pastries and homemade
+                        desserts
+                        to
+                        the occasional savory experiment. I’ll be sharing recipes, tips I’ve picked up, successes (and
+                        probably
+                        a few fails), and everything in between.
+                    </p>
+                    <p class="text-break my-3 fw-light fs-6">
+                        If you love the smell of fresh bread, the magic of a well-balanced dessert, or just enjoy the
+                        art of
+                        baking, welcome to my kitchen.
+                    </p>
+                    <p class="mb-0 fw-light fs-6">
+                        <a href="#" class="text-body-emphasis fw-bold">Let’s cook something delicious!</a>
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                <h1 class="display-6 fst-italic">🍰 Sweet Side of Life: Baking, Pastry & Dessert</h1>
-                <p class="text-break my-3 fw-light fs-6">
-                    When the hiking boots are off and the code editor is closed, you’ll probably
-                    find me in the kitchen, covered in flour and chasing that perfect bake. Cooking is my way of slowing
-                    down — and baking, in particular, is where I really get into the zone. There's something incredibly
-                    satisfying about turning simple ingredients into something that brings comfort, joy, or just a
-                    really
-                    good sugar rush.
-                </p>
-                <p class="text-break my-3 fw-light fs-6">
-                    This part of the blog is dedicated to all things sweet — from flaky pastries and homemade desserts
-                    to
-                    the occasional savory experiment. I’ll be sharing recipes, tips I’ve picked up, successes (and
-                    probably
-                    a few fails), and everything in between.
-                </p>
-                <p class="text-break my-3 fw-light fs-6">
-                    If you love the smell of fresh bread, the magic of a well-balanced dessert, or just enjoy the art of
-                    baking, welcome to my kitchen.
-                </p>
-                <p class="mb-0 fw-light fs-6">
-                    <a href="#" class="text-body-emphasis fw-bold">Let’s cook something delicious!</a>
-                </p>
-            </div>
-        </div>
+        </article>
+
+        
+
     </main>
     <footer class="py-3 text-center text-body-emphasis bg-body-secondary">
         <p class="m-0">
