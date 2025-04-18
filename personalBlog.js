@@ -1,4 +1,4 @@
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction();
 };
 
@@ -9,7 +9,7 @@ let backToTop = document.getElementById("btn-back-to-top");
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         backToTop.style.display = "block";
-    } else {    
+    } else {
         backToTop.style.display = "none";
     }
 }
@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     htmlElement.setAttribute("data-bs-theme", currentTheme);
     switchElement.checked = currentTheme === "dark";
 
-    switchElement.addEventListener("change", function (){
+    switchElement.addEventListener("change", function () {
         const newTheme = this.checked ? "dark" : "light";
         let newText = "";
         htmlElement.setAttribute("data-bs-theme", newTheme);
-        if(newTheme == "dark") {
+        if (newTheme == "dark") {
             newText = "Light Mode";
-        } else {newText = "Dark Mode";}
+        } else { newText = "Dark Mode"; }
         document.getElementById("darkModeSwitch-text").innerHTML = newText;
         localStorage.setItem("bsTheme", newTheme);
     });
@@ -47,17 +47,48 @@ const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click" , function() {
-        for (let i = 0; i < pages.length; i++) {
-            if(this.innerHTML.toLowerCase() === pages[i].dataset.page){
-                pages[i].classList.add("active");
-                navLinks[i].classList.add("active");
+    navLinks[i].addEventListener("click", function () {
+        for (let j = 0; j < pages.length; j++) {
+            if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+                pages[j].classList.add("active");
+                navLinks[j].classList.add("active");
                 window.scrollTo(0, 0);
             }
             else {
-                pages[i].classList.remove("active");
-                navLinks[i].classList.remove("active");
+                pages[j].classList.remove("active");
+                navLinks[j].classList.remove("active");
             }
         }
     });
+}
+
+const aboutlinks = document.querySelectorAll("[data-about-link]");
+
+
+for (let i = 0; i < aboutlinks.length; i++) {
+    aboutlinks[i].addEventListener("click", function () {
+        for (let j = 0; j < pages.length; j++) {
+            if (this.dataset.aboutLink === pages[j].dataset.page) {
+                pages[j].classList.add("active");
+                navLinks[j].classList.add("active");
+                pages[0].classList.remove("active");
+                window.scrollTo(0, 0);
+            }
+            else {
+                navLinks[j].classList.remove("active");
+            }
+        }
+    })
+}
+
+/* Outdoor read more toggle */
+
+const outdoors = document.getElementsByClassName("read-more");
+const outdoorsFull = document.getElementsByClassName("outdoor-article-full");
+
+for (let i = 0; i < outdoors.length; i++) {
+    outdoors[i].addEventListener("click", function () {
+        outdoors[i].classList.add("d-none");
+        outdoorsFull[i].classList.remove("d-none");
+    })
 }
