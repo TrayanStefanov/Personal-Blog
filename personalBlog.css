@@ -2,6 +2,8 @@ html {
     transition: background-color 0.3 ease, color 0.3 ease;
 }
 
+
+
 article {
     display: none;
 }
@@ -15,12 +17,20 @@ article.active {
     display: none;
 }
 
+/* Navbar */
+.nav-link:hover{
+    cursor: pointer;
+}
+
+/* About landing page */
+
 #blog-header {
     font-size: 2.25rem !important;
 }
 
 #intro-image {
     min-height: 50vh;
+    aspect-ratio: 1;
     background: url(./images/personal-photo.jpg) 50% 50%;
     background-size: cover;
     overflow: hidden;
@@ -44,25 +54,33 @@ article.active {
     overflow: hidden;
 }
 
+[data-about-link]{
+    cursor: pointer;
+}
+
 /* Outdoors */
 
 .outdoor-image{
     width: -webkit-fill-available;
 }
 
-.full-story{
-    display: none;
+.read-more:hover{
+    cursor: pointer;
 }
 
 /* Cooking */
 
-.recipe-border:active{
+.recipe-border.active, .recipe-border:hover{
     background-color: beige;
 }
 
 .card{
     min-height: 18vw !important;
     max-height: 18vw !important;
+}
+
+.card:hover{
+    cursor: pointer;
 }
 
 .card-img-top{
@@ -78,6 +96,11 @@ article.active {
     display: none !important;
 }
 
-.full-recipe:active{
+.full-recipe > div > div > img{
+    aspect-ratio: 16/9;
+}
+
+.full-recipe.active{
     display: flex !important;
+    animation: fade 1s ease backwards;
 }
