@@ -81,6 +81,33 @@ for (let i = 0; i < aboutlinks.length; i++) {
     })
 }
 
+/* Recipe - extension */
+
+const cards = document.querySelectorAll("[data-recipe]");
+const recipes = document.querySelectorAll("[data-recipe-full]");
+
+for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener("click", function () {
+        for (let j = 0; j < recipes.length; j++) {
+            if (this.dataset.recipe === recipes[j].dataset.recipeFull) {
+                if (this.parentElement.parentElement.classList.contains("active")) {
+                    cards[j].parentElement.parentElement.classList.remove("active");
+                    recipes[j].classList.remove("active");
+                }
+                else {
+                    cards[j].parentElement.parentElement.classList.add("active");
+                    recipes[j].classList.add("active");
+                    window.scrollTo(0, 0);
+                }
+            }
+            else {
+                cards[j].parentElement.parentElement.classList.remove("active");
+                recipes[j].classList.remove("active");
+            }
+        }
+    })
+}
+
 /* Outdoor read more toggle */
 
 const outdoors = document.getElementsByClassName("read-more");
