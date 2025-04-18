@@ -104,3 +104,9 @@ article.active {
     display: flex !important;
     animation: fade 1s ease backwards;
 }
+
+/* Contacts */
+
+.form-control{
+    field-sizing: content;
+}
