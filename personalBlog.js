@@ -119,3 +119,17 @@ for (let i = 0; i < outdoors.length; i++) {
         outdoorsFull[i].classList.remove("d-none");
     })
 }
+
+/* Form submission */
+
+const form = document.querySelector("[data-form]");
+const formFields = document.querySelectorAll("[data-form-input]");
+const formSubmitBtn = document.querySelector("[data-form-btn]");
+
+for (let i = 0; i<formFields.length; i++) {
+    formFields[i].addEventListener("input", function () {
+        if(form.checkValidity()) {
+            formSubmitBtn.removeAttribute("disabled");
+        }
+    })
+}
