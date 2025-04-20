@@ -110,3 +110,8 @@ article.active {
 .form-control{
     field-sizing: content;
 }
+
+#submitButton {
+    justify-self: end;
+    background-color: var(--bs-body-bg);
+}
