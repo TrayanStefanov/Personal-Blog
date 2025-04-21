@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("darkModeSwitch-text").innerHTML = newText;
         localStorage.setItem("bsTheme", newTheme);
     });
-});
+})
 
 /* Page Navigation */
 
@@ -78,7 +78,7 @@ for (let i = 0; i < aboutlinks.length; i++) {
                 navLinks[j].classList.remove("active");
             }
         }
-    })
+    });
 }
 
 /* Recipe - extension */
@@ -105,7 +105,7 @@ for (let i = 0; i < cards.length; i++) {
                 recipes[j].classList.remove("active");
             }
         }
-    })
+    });
 }
 
 /* Outdoor read more toggle */
@@ -117,7 +117,7 @@ for (let i = 0; i < outdoors.length; i++) {
     outdoors[i].addEventListener("click", function () {
         outdoors[i].classList.add("d-none");
         outdoorsFull[i].classList.remove("d-none");
-    })
+    });
 }
 
 /* Form submission */
@@ -126,10 +126,32 @@ const form = document.querySelector("[data-form]");
 const formFields = document.querySelectorAll("[data-form-input]");
 const formSubmitBtn = document.querySelector("[data-form-btn]");
 
-for (let i = 0; i<formFields.length; i++) {
+for (let i = 0; i < formFields.length; i++) {
     formFields[i].addEventListener("input", function () {
-        if(form.checkValidity()) {
+        if (form.checkValidity()) {
             formSubmitBtn.removeAttribute("disabled");
         }
-    })
+    });
 }
+
+emailjs.init("bfJIAK9oYio7zkqe2")
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = {
+        from_name: form.fullname.value,
+        from_email: form.email.value,
+        title: form.topic.value,
+        message: form.message.value
+    }
+
+    emailjs.send("service_0juv8dt", "template_ukxfgdg", formData).then(function (response) {
+        alert("Message sent successfully!");
+        form.reset();
+        formSubmitBtn.setAttribute("disabled", "");
+    }, function (error) {
+        alert("Failed sending message. Please try again in a bit.")
+    });
+
+})
