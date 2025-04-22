@@ -134,6 +134,8 @@ for (let i = 0; i < formFields.length; i++) {
     });
 }
 
+/* Emailjs implementation */
+
 emailjs.init("bfJIAK9oYio7zkqe2")
 
 form.addEventListener("submit", function (e) {
