@@ -1,3 +1,4 @@
 # Personal Blog site.
 
--Making a blog for my personal hobbies. 
+    Initial version is up and running
+    I have plans to revisit it at a later date.
