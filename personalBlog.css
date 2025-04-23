@@ -1,8 +1,7 @@
+
 html {
     transition: background-color 0.3 ease, color 0.3 ease;
 }
-
-
 
 article {
     display: none;
@@ -22,39 +21,26 @@ article.active {
     cursor: pointer;
 }
 
+
+[data-about-link]{
+    cursor: pointer;
+}
+
 /* About landing page */
 
 #blog-header {
     font-size: 2.25rem !important;
 }
 
-#intro-image {
-    aspect-ratio: 1;
-    background: url(./images/personal-photo.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
+/* Contacts */
+
+.form-control{
+    field-sizing: content;
 }
 
-#outdoors-image {
-    background: url(./images/outdoors.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-}
-
-#programming-image {
-    background: url(./images/programming.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-}
-
-#cooking-image {
-    background: url(./images/cooking.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-}
-
-[data-about-link]{
-    cursor: pointer;
+#submitButton {
+    justify-self: end;
+    background-color: var(--bs-body-bg);
 }
 
 /* Outdoors */
@@ -81,6 +67,81 @@ article.active {
 .recipe-border.active, .recipe-border:hover{
     background-color: beige;
 }
+
+@media screen and (min-width:320px){
+    #outdoors-container,
+    #programming-container,
+    #cooking-container{
+       border:0px !important;
+    }
+
+    #outdoors-image-container,
+    #programming-image-container,
+    #cooking-image-container{
+       border:0px !important;
+    }
+
+    #intro-image{
+        min-width: 200px;
+    }
+    #outdoors-image,
+    #programming-image,
+    #cooking-image{
+        min-height: 300px;
+        min-width: 300px;
+    }
+
+    #outdoors-image
+    #programming-image,
+    #cooking-image{
+        min-height: 300px;
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width:576px){}
+
+@media screen and (min-width:768px){}
+
+@media screen and (min-width:992px){
+    #outdoors-container,
+    #programming-container,
+    #cooking-container{
+       color: white !important;
+    }
+}
+@media screen and (min-width:1200px){}
+
+@media screen and (min-width:1400px){}
+
+#intro-image {
+    aspect-ratio: 1;
+    background: url(./images/personal-photo.jpg) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#outdoors-image {
+    background: url(./images/outdoors.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#programming-image {
+    background: url(./images/programming.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#cooking-image {
+    background: url(./images/cooking.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* Cooking */
 
 .card{
     min-height: 18vw !important;
@@ -113,13 +174,3 @@ article.active {
     animation: fade 1s ease backwards;
 }
 
-/* Contacts */
-
-.form-control{
-    field-sizing: content;
-}
-
-#submitButton {
-    justify-self: end;
-    background-color: var(--bs-body-bg);
-}
