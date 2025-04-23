@@ -40,30 +40,32 @@
             <a class="text-body-emphasis text-decoration-none" id="blog-header" href="#">A brief view of my world</a>
         </header>
         <div class="border-bottom lh-1 mb-3 d-flex justify-content-evenly" id="navbar-container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-nav-link>About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-nav-link>Outdoors</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-nav-link>Programming</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-nav-link>Cooking</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-nav-link>Contacts</a>
-                            </li>
-                        </ul>
-                    </div>
+            <nav class="navbar navbar-expand me-auto">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav d-flex-sm flex-row justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active px-1" data-nav-link>About</a>
+                        </li>
+                        <div class="vr d-block"></div>
+                        <li class="nav-item">
+                            <a class="nav-link px-1" data-nav-link>Outdoors</a>
+                        </li>
+                        <div class="vr d-block"></div>
+                        <li class="nav-item">
+                            <a class="nav-link px-1" data-nav-link>Programming</a>
+                        </li>
+                        <div class="vr d-block"></div>
+                        <li class="nav-item">
+                            <a class="nav-link px-1" data-nav-link>Cooking</a>
+                        </li>
+                        <div class="vr d-block"></div>
+                        <li class="nav-item">
+                            <a class="nav-link px-1" data-nav-link>Contacts</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -71,42 +73,47 @@
     <main class="container">
 
         <!-- Landing about me page -->
-        <article class="about" data-page="about">
-            <div class="row bg-body-secondary rounded-4 text-body-emphasis p-3 mb-3">
-                <div class="col-lg-7">
-                    <h1 class="display-4 fst-italic">Welcome to Trayo's world</h1>
-                    <p class="text-break my-3 lead">Hey there! I’m Trayan — 30 years old, curious by nature, and always
-                        chasing
-                        the next thing that sparks my interest. This blog is my little corner of the internet where I
-                        share
-                        the
-                        things I’m passionate about — from hobbies I’m diving into, to thoughts, ideas, and everything
-                        in
-                        between.
+        <article class="about active" data-page="about">
+            <h1 class="display-4 fst-italic d-none d-md-block d-lg-none m-5 align-self-center text-center">Welcome to
+                Trayo's world</h1>
+            <div class="bg-body-secondary rounded-md-4 text-body-emphasis mb-3 p-3">
+                <div class="col row-md d-md-flex flex-row-reverse justify-content-center">
+                    <div class="row col-md-5 img-container p-0 p-md-3">
+                        <div id="intro-image" class="h-100 mh-100 rounded-md-4"></div>
+                    </div>
+                    <div class="row col-md-7 p-0 p-md-3">
+                        <h1 class="display-4 fst-italic mt-4 d-md-none d-lg-block">Welcome to Trayo's world</h1>
+                        <p class="text-break my-3 lead">Hey there! I’m Trayan — 30 years old, curious by nature, and
+                            always
+                            chasing
+                            the next thing that sparks my interest. This blog is my little corner of the internet where
+                            I
+                            share
+                            the
+                            things I’m passionate about — from hobbies I’m diving into, to thoughts, ideas, and
+                            everything
+                            in
+                            between.
 
-                        Whether it’s exploring new tech, diving into creative projects, or just enjoying the simple
-                        things
-                        in
-                        life, this space is all about what excites and inspires me. Thanks for stopping by — hope you
-                        find
-                        something here that clicks with you too.
+                            Whether it’s exploring new tech, diving into creative projects, or just enjoying the simple
+                            things
+                            in
+                            life, this space is all about what excites and inspires me. Thanks for stopping by — hope
+                            you
+                            find
+                            something here that clicks with you too.
 
-                    </p>
-                    <!-- <p class="mb-0 lead">
-                <a href="#" class="text-body-emphasis fw-bold">Continue reading...</a>
-            </p> -->
-                </div>
-                <div class="col-lg-5 img-container">
-                    <div id="intro-image" class="h-100 mh-100 rounded-4"></div>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="row p-3 d-flex flex-row justify-content-between border border-end-0 border-2"
+            <div class="row p-lg-3 d-flex flex-row justify-content-between border border-end-0 border-2 mb-3"
                 id="outdoors-container">
-                <div class="col-lg-6 border-end border-2">
-                    <div id="outdoors-image" class="h-100 mh-100 rounded-4"></div>
+                <div class="col-lg-6 border-end border-2 p-0" id="outdoors-image-container">
+                    <div id="outdoors-image" class="h-100 mh-100 rounded-md-4"></div>
                 </div>
-                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                    <h1 class="display-6 fst-italic">🌄 The Outdoors: Where I Feel Most Alive</h1>
+                <div class="col-lg-5 bg-body-secondary rounded-md-4 text-body-emphasis p-3">
+                    <h1 class="display-6 fst-italic mt-3">🌄 The Outdoors: Where I Feel Most Alive</h1>
                     <p class="text-break my-3 fw-light fs-5">
                         There’s something about being out in nature that resets everything — the
                         mind, the body, the soul. For me, the outdoors isn't just a hobby, it's a way of reconnecting
@@ -129,13 +136,13 @@
                     </p>
                 </div>
             </div>
-            <div class="row p-3 d-flex flex-row-reverse justify-content-between border-end border-2"
+            <div class="row p-lg-3 d-flex flex-row-reverse justify-content-between border-end border-2 mb-3"
                 id="programming-container">
-                <div class="col-lg-6 border-start border-2">
-                    <div id="programming-image" class="h-100 mh-100 rounded-4"></div>
+                <div class="col-lg-6 border-start border-2 p-0" id="programming-image-container">
+                    <div id="programming-image" class="h-100 mh-100 rounded-md-4"></div>
                 </div>
-                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                    <h1 class="display-6 fst-italic">💻 Code & Creativity: Building for an Easier Tomorow
+                <div class="col-lg-5 bg-body-secondary rounded-md-4 text-body-emphasis p-md-3">
+                    <h1 class="display-6 fst-italic mt-3">💻 Code & Creativity: Building for an Easier Tomorow
                     </h1>
                     <p class="text-break my-3 fw-light fs-5">
                         When I’m not out exploring nature, I’m probably deep in code — turning ideas
@@ -172,13 +179,13 @@
                     </p>
                 </div>
             </div>
-            <div class="row p-3 mb-3 d-flex flex-row justify-content-between border border-end-0 border-2"
+            <div class="row p-lg-3 mb-3 d-flex flex-row justify-content-between border border-end-0 border-2 mb-3"
                 id="cooking-container">
-                <div class="col-lg-6 border-end border-2">
-                    <div id="cooking-image" class="h-100 mh-100 rounded-4"></div>
+                <div class="col-lg-6 border-end border-2 p-0" id="cooking-image-container">
+                    <div id="cooking-image" class="h-100 mh-100 rounded-md-4"></div>
                 </div>
-                <div class="col-lg-5 bg-body-secondary rounded-4 text-body-emphasis p-3">
-                    <h1 class="display-6 fst-italic">🍰 Sweet Side of Life: Baking, Pastry & Dessert</h1>
+                <div class="col-lg-5 bg-body-secondary rounded-md-4 text-body-emphasis p-md-3">
+                    <h1 class="display-6 fst-italic mt-3">🍰 Sweet Side of Life: Baking, Pastry & Dessert</h1>
                     <p class="text-break my-3 fw-light fs-5">
                         When the hiking boots are off and the code editor is closed, you’ll probably
                         find me in the kitchen, covered in flour and chasing that perfect bake. Cooking is my way of
@@ -212,7 +219,7 @@
 
         <!-- Outdoors -->
         <article class="outdoors" data-page="outdoors">
-            <div class="row bg-body-secondary rounded-4 text-center text-body-emphasis p-3 mb-5">
+            <div class="row bg-body-secondary rounded-md-4 text-center text-body-emphasis p-md-3 mb-5">
                 <h1 class="display-2 fst-italic">🌄 The Outdoors: Where I Feel Most Alive</h1>
                 <p class="text-break my-3 fw-light fs-5">
                     There’s something about being out in nature that resets everything — the
@@ -233,7 +240,7 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col bg-body-secondary rounded-4 text-body-emphasis p-3 mb-3">
+                <div class="col bg-body-secondary rounded-md-4 text-body-emphasis p-md-3 mb-3">
                     <div class="row article-visible">
                         <div class="col-lg-6">
                             <h3 class="display-6 fst-italic">Hiking the Seven Rila Lakes: A Journey Through Bulgaria’s
@@ -287,7 +294,7 @@
                             <p class="text-break my-3 fw-bold fs-5 read-more">Read More...</p>
                         </div>
                         <div class="col-lg-6 align-self-center">
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/rila1.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">Babreka (The Kidney) — arguably
@@ -355,12 +362,12 @@
                             </figure>
                         </div>
                         <div class="col-lg-6">
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/rila2.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">Okoto (The Eye) — the deepest
                                 glacial lake in Bulgaria.</p>
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/rila3.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">Breathtaking view from Lake peak.
@@ -371,7 +378,7 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col bg-body-secondary rounded-4 text-body-emphasis p-3 mb-3">
+                <div class="col bg-body-secondary rounded-md-4 text-body-emphasis p-md-3 mb-3">
                     <div class="row article-visible">
                         <div class="col-lg-6">
                             <h3 class="display-6 fst-italic">Exploring Kamen Del: Sofia’s Hidden Gem Above the Clouds
@@ -401,7 +408,7 @@
                             <p class="text-break my-3 fw-bold fs-5 read-more">Read More...</p>
                         </div>
                         <div class="col-lg-6 align-self-center">
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/kamen-del1.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">You can see the whole of Sofia
@@ -489,11 +496,11 @@
                             </figure>
                         </div>
                         <div class="col-lg-6">
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/kamen-del2.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">An amazing skyline.</p>
-                            <div class="image-container p-3 mb-4">
+                            <div class="image-container p-md-3 mb-4">
                                 <img class="outdoor-image" src="./images/kamen-del3.jpg" alt="">
                             </div>
                             <p class="text-center text-break fw-light fs-5 fst-italic">Captivating sunset over Sofia.
@@ -506,8 +513,8 @@
 
         <!-- Programming -->
 
-        <article class="programming active" data-page="programming">
-            <div class="container bg-body-secondary rounded-4 justify-content-center p-5 mb-5">
+        <article class="programming" data-page="programming">
+            <div class="container bg-body-secondary rounded-md-4 justify-content-center p-5 mb-5">
                 <h1 class="display-2 fst-italic">💻 Coding Corner: for an Easier Life</h1>
                 <p class="text-break my-3 fw-light fs-5">
                     When I’m not out exploring nature, I’m probably deep in code — turning ideas
@@ -533,7 +540,7 @@
                 <h4>
                     Take your pick
                 </h4>
-                <div id="accordion" >
+                <div id="accordion">
                     <p class="d-flex flex-row text-break my-3 fw-light fs-5 justify-content-evenly">
                         <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
                             data-bs-target="#Collapse1" data-collapse-row1="collapse1" aria-expanded="false"
@@ -547,7 +554,7 @@
                             data-bs-target="#Collapse3" data-collapse-row1="collapse3" aria-expanded="false"
                             aria-controls="Collapse3">Lifestyle Apps</button>
                     </p>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-md-4 border border-3 p-4"
                         data-bs-parent="#accordion" id="Collapse1">
                         <h3 class="display-6">How AI is Changing the Landscape of Software Development</h3>
                         <p>The world of software development is undergoing a transformation — and artificial
@@ -588,7 +595,7 @@
                             and
                             continuing to develop a deep understanding of software architecture and problem-solving.</p>
                     </div>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-md-4 border border-3 p-4"
                         data-bs-parent="#accordion" id="Collapse2">
                         <h3 class="display-6">Technology and Its True Purpose: Making Life Easier</h3>
                         <p>In a world buzzing with innovation, it's easy to get caught up in the latest gadgets, apps,
@@ -652,7 +659,7 @@
 
                             The future isn’t just about smarter tech — it’s about using that tech smartly.</p>
                     </div>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-md-4 border border-3 p-4"
                         data-bs-parent="#accordion" id="Collapse3">
                         <h3 class="display-6">Lifestyle Apps: Easing the Mental Load in the Age of Endless Decisions
                         </h3>
@@ -732,7 +739,7 @@
         <!-- Cooking -->
 
         <article class="cooking" data-page="cooking">
-            <div class="bg-body-secondary rounded-4 text-body-emphasis p-5 mb-5 active" id="recipeHeader">
+            <div class="bg-body-secondary rounded-md-4 text-body-emphasis p-5 mb-5 active" id="recipeHeader">
                 <h1 class="display-2 fst-italic">🍰 Sweet Side of Life: Baking & Dessert</h1>
                 <p class="text-break my-3 fw-light fs-5">
                     When the hiking boots are off and the code editor is closed, you’ll probably
@@ -758,11 +765,11 @@
                     baking, welcome to my kitchen.
                 </p>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe1">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe1.png" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe1.png" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -798,11 +805,11 @@
                     </p>
                 </div>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe2">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe2.png" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe2.png" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -832,11 +839,11 @@
                     </p>
                 </div>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe3">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe3.jpg" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe3.jpg" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -864,11 +871,11 @@
                     <h5>You can serve them sweet or savory!</h5>
                 </div>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe4">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe4.jpg" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe4.jpg" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -896,11 +903,11 @@
                     <h5>Perfect as a guilt-free treat, snack, or even a fun breakfast twist.</h5>
                 </div>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe5">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe5.png" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe5.png" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -939,11 +946,11 @@
                     </h5>
                 </div>
             </div>
-            <div class="row full-recipe bg-body-secondary rounded-4 justify-content-center mb-3"
+            <div class="row full-recipe bg-body-secondary rounded-md-4 justify-content-center mb-3"
                 data-recipe-full="recipe6">
                 <div class="row">
                     <div class="col-lg-5 text-body-emphasis p-4">
-                        <img class="img-fluid rounded-4" src="./images/recipe6.jpg" alt="">
+                        <img class="img-fluid rounded-md-4" src="./images/recipe6.jpg" alt="">
                     </div>
                     <div class="col-lg-7 p-4">
                         <div class="row text-center mb-2">
@@ -977,8 +984,8 @@
             </div>
 
             <div class="row">
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
                         <div class="card" data-recipe="recipe1">
                             <img class="card-img-top" src="./images/recipe1.png" alt="">
                             <div class="card-body">
@@ -989,8 +996,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
 
                         <div class="card" data-recipe="recipe2">
                             <img class="card-img-top" src="./images/recipe2.png" alt="">
@@ -1001,8 +1008,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
 
                         <div class="card" data-recipe="recipe3">
                             <img class="card-img-top" src="./images/recipe3.jpg" alt="">
@@ -1015,8 +1022,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
                         <div class="card" data-recipe="recipe4">
                             <img class="card-img-top" src="./images/recipe4.jpg" alt="">
                             <div class="card-body">
@@ -1027,8 +1034,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
                         <div class="card" data-recipe="recipe5">
                             <img class="card-img-top" src="./images/recipe5.png" alt="">
                             <div class="card-body">
@@ -1038,8 +1045,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 text-body-emphasis p-3 rounded-4 recipe-border">
-                    <div class="card-container bg-body-secondary rounded-4 p-3">
+                <div class="col-4 text-body-emphasis p-md-3 rounded-md-4 recipe-border">
+                    <div class="card-container bg-body-secondary rounded-md-4 p-md-3">
                         <div class="card" data-recipe="recipe6">
                             <img class="card-img-top" src="./images/recipe6.jpg" alt="">
                             <div class="card-body">
@@ -1057,7 +1064,7 @@
         <article class="contacts" data-page="contacts">
             <h1 class="display-1 fst-italic">Contacts</h1>
             <div class="row justify-content-evenly">
-                <div class="col-lg-4 bg-body-secondary rounded-4 text-body-emphasis p-4 m-3 text-center"
+                <div class="col-lg-4 bg-body-secondary rounded-md-4 text-body-emphasis p-4 m-3 text-center"
                     style="align-content: space-evenly;">
                     <h5 class="fw-bold">Email</h5>
                     <p>trayanstefanov95@gmail.com</p>
@@ -1070,7 +1077,7 @@
                     <a class="text-decoration-none" style="color: var(--bs-heading-color)"
                         href="https://github.com/TrayanStefanov">https://github.com/TrayanStefanov</a>
                 </div>
-                <div class="col-lg-7 bg-body-secondary rounded-4 text-body-emphasis p-4 m-3">
+                <div class="col-lg-7 bg-body-secondary rounded-md-4 text-body-emphasis p-4 m-3">
                     <section class="map-container">
                         <figure>
                             <iframe class="w-100"
@@ -1081,26 +1088,26 @@
                     </section>
                 </div>
             </div>
-            <div class="row bg-body-secondary rounded-4 text-body-emphasis p-4 m-3">
+            <div class="row bg-body-secondary rounded-md-4 text-body-emphasis p-4 m-3">
                 <h2 class="mb-3">Contact Form</h2>
                 <form id="contactForm" role="form" class="form" data-form>
                     <div class="row" id="smallFormFields">
                         <div class="col">
-                            <input type="text" name="fullname" id="fullname" class="form-control rounded-4 mb-2"
+                            <input type="text" name="fullname" id="fullname" class="form-control rounded-md-4 mb-2"
                                 placeholder="Full name" required data-form-input>
                         </div>
                         <div class="col">
-                            <input type="email" name="email" id="email" class="form-control rounded-4 mb-2"
+                            <input type="email" name="email" id="email" class="form-control rounded-md-4 mb-2"
                                 placeholder="Email" required data-form-input>
                         </div>
                         <div class="col">
-                            <input type="text" name="topic" id="topic" class="form-control rounded-4 mb-2"
+                            <input type="text" name="topic" id="topic" class="form-control rounded-md-4 mb-2"
                                 placeholder="Topic" required data-form-input>
                         </div>
                     </div>
-                    <textarea type="text" name="message" id="message" class="form-control rounded-4 mb-3"
+                    <textarea type="text" name="message" id="message" class="form-control rounded-md-4 mb-3"
                         placeholder="Your message to me" required data-form-input></textarea>
-                    <button class="fomr-btn d-flex rounded-4 align-items-center py-1 px-3" type="submit"
+                    <button class="fomr-btn d-flex rounded-md-4 align-items-center py-1 px-3" type="submit"
                         id="submitButton" disabled data-form-btn>
                         <i class='far fa-paper-plane'></i>
                         <span class="ms-2">Send Message</span>
