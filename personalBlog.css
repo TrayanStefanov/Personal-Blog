@@ -1,4 +1,3 @@
-
 html {
     transition: background-color 0.3 ease, color 0.3 ease;
 }
@@ -17,12 +16,12 @@ article.active {
 }
 
 /* Navbar */
-.nav-link:hover{
+.nav-link:hover {
     cursor: pointer;
 }
 
 
-[data-about-link]{
+[data-about-link] {
     cursor: pointer;
 }
 
@@ -34,7 +33,7 @@ article.active {
 
 /* Contacts */
 
-.form-control{
+.form-control {
     field-sizing: content;
 }
 
@@ -45,74 +44,110 @@ article.active {
 
 /* Outdoors */
 
-.outdoor-image{
+.outdoor-image {
     width: -webkit-fill-available;
 }
 
-.read-more:hover{
+.read-more:hover {
     cursor: pointer;
 }
 
 /* Cooking */
 
-#recipeHeader{
+#recipeHeader {
     display: none !important;
 }
 
-#recipeHeader.active{
+#recipeHeader.active {
     display: block !important;
 }
 
 
-.recipe-border.active, .recipe-border:hover{
+.recipe-border.active,
+.recipe-border:hover {
     background-color: beige;
 }
 
-@media screen and (min-width:320px){
+@media screen and (min-width:320px) {
+
     #outdoors-container,
     #programming-container,
-    #cooking-container{
-       border:0px !important;
+    #cooking-container {
+        border: none !important;
     }
 
     #outdoors-image-container,
     #programming-image-container,
-    #cooking-image-container{
-       border:0px !important;
+    #cooking-image-container {
+        border: none !important;
     }
 
-    #intro-image{
+    #intro-image {
         min-width: 200px;
     }
+
     #outdoors-image,
     #programming-image,
-    #cooking-image{
+    #cooking-image {
         min-height: 300px;
         min-width: 300px;
     }
 
-    #outdoors-image
-    #programming-image,
-    #cooking-image{
+    #outdoors-image #programming-image,
+    #cooking-image {
         min-height: 300px;
         min-width: 300px;
     }
 }
 
-@media screen and (min-width:576px){}
+@media screen and (min-width:576px) {}
 
-@media screen and (min-width:768px){}
+@media screen and (min-width:768px) {
 
-@media screen and (min-width:992px){
-    #outdoors-container,
+    .rounded-md-4{
+        border-radius: 2rem;
+    }
+
+    .card {
+        min-height: 40vw !important;
+        max-height: 40vw !important;
+    }
+
+    .card-img-top {
+        min-height: 20vw !important;
+        max-height: 20vw !important;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+   /*  #outdoors-container,
     #programming-container,
-    #cooking-container{
-       color: white !important;
+    #cooking-container {
+        border: 
+    }
+
+    #outdoors-image-container,
+    #programming-image-container,
+    #cooking-image-container {
+        border: 0px !important;
+    } */
+    
+
+    .card {
+        min-height: 30vw !important;
+        max-height: 30vw !important;
+    }
+
+    .card-img-top {
+        min-height: 15vw !important;
+        max-height: 15vw !important;
     }
 }
-@media screen and (min-width:1200px){}
 
-@media screen and (min-width:1400px){}
+@media screen and (min-width:1200px) {}
+
+@media screen and (min-width:1400px) {}
 
 #intro-image {
     aspect-ratio: 1;
@@ -143,34 +178,27 @@ article.active {
 
 /* Cooking */
 
-.card{
-    min-height: 18vw !important;
-    max-height: 18vw !important;
-}
 
-.card:hover{
+
+.card:hover {
     cursor: pointer;
 }
 
-.card-img-top{
-    min-height: 10vw !important;
-    max-height: 10vw !important;
-}
 
-.card-text{
+
+.card-text {
     text-indent: 2ch;
 }
 
-.full-recipe{
+.full-recipe {
     display: none !important;
 }
 
-.full-recipe > div > div > img{
+.full-recipe>div>div>img {
     aspect-ratio: 16/9;
 }
 
-.full-recipe.active{
+.full-recipe.active {
     display: flex !important;
     animation: fade 1s ease backwards;
 }
-
