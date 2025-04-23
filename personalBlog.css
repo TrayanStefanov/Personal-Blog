@@ -29,7 +29,6 @@ article.active {
 }
 
 #intro-image {
-    min-height: 50vh;
     aspect-ratio: 1;
     background: url(./images/personal-photo.jpg) 50% 50%;
     background-size: cover;

@@ -85,6 +85,7 @@ for (let i = 0; i < aboutlinks.length; i++) {
 
 const cards = document.querySelectorAll("[data-recipe]");
 const recipes = document.querySelectorAll("[data-recipe-full]");
+const recipesHeader = document.getElementById("recipeHeader");
 
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", function () {
@@ -93,10 +94,12 @@ for (let i = 0; i < cards.length; i++) {
                 if (this.parentElement.parentElement.classList.contains("active")) {
                     cards[j].parentElement.parentElement.classList.remove("active");
                     recipes[j].classList.remove("active");
+                    recipesHeader.classList.add("active");
                 }
                 else {
                     cards[j].parentElement.parentElement.classList.add("active");
                     recipes[j].classList.add("active");
+                    recipesHeader.classList.remove("active");
                     window.scrollTo(0, 0);
                 }
             }

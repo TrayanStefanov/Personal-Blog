@@ -97,7 +97,7 @@
             </p> -->
                 </div>
                 <div class="col-lg-5 img-container">
-                    <div id="intro-image" class="h-100 mh-100"></div>
+                    <div id="intro-image" class="h-100 mh-100 rounded-4"></div>
                 </div>
             </div>
             <div class="row p-3 d-flex flex-row justify-content-between border border-end-0 border-2"
@@ -533,17 +533,22 @@
                 <h4>
                     Take your pick
                 </h4>
-                <p class="d-flex text-break my-3 fw-light fs-5 justify-content-evenly">
-                    <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#Collapse1" data-colapse aria-expanded="false" aria-controls="Collapse1">Ai &
-                        Code</button>
-                    <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#Collapse2" data-colapse aria-expanded="false" aria-controls="Collapse2">The
-                        purpose of technology</button>
-                    <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#Collapse3" data-colapse aria-expanded="false"
-                        aria-controls="Collapse3">Lifestyle Apps</button>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4" id="Collapse1">
+                <div id="accordion" >
+                    <p class="d-flex flex-row text-break my-3 fw-light fs-5 justify-content-evenly">
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#Collapse1" data-collapse-row1="collapse1" aria-expanded="false"
+                            aria-controls="Collapse1">Ai &
+                            Code</button>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#Collapse2" data-collapse-row1="collapse2" aria-expanded="false"
+                            aria-controls="Collapse2">The
+                            purpose of technology</button>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#Collapse3" data-collapse-row1="collapse3" aria-expanded="false"
+                            aria-controls="Collapse3">Lifestyle Apps</button>
+                    </p>
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                        data-bs-parent="#accordion" id="Collapse1">
                         <h3 class="display-6">How AI is Changing the Landscape of Software Development</h3>
                         <p>The world of software development is undergoing a transformation — and artificial
                             intelligence
@@ -583,7 +588,8 @@
                             and
                             continuing to develop a deep understanding of software architecture and problem-solving.</p>
                     </div>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4" id="Collapse2">
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                        data-bs-parent="#accordion" id="Collapse2">
                         <h3 class="display-6">Technology and Its True Purpose: Making Life Easier</h3>
                         <p>In a world buzzing with innovation, it's easy to get caught up in the latest gadgets, apps,
                             and
@@ -646,7 +652,8 @@
 
                             The future isn’t just about smarter tech — it’s about using that tech smartly.</p>
                     </div>
-                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4" id="Collapse3">
+                    <div class="collapse text-break my-3 fw-light fs-5 rounded-4 border border-3 p-4"
+                        data-bs-parent="#accordion" id="Collapse3">
                         <h3 class="display-6">Lifestyle Apps: Easing the Mental Load in the Age of Endless Decisions
                         </h3>
                         <p>Life in the 21st century is nothing if not full. From the moment we wake up, we’re bombarded
@@ -718,7 +725,7 @@
                             intention.
                         </p>
                     </div>
-                </p>
+                </div>
             </div>
         </article>
 
