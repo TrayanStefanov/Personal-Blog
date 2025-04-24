@@ -121,17 +121,21 @@ article.active {
 
 @media screen and (min-width:992px) {
 
-   /*  #outdoors-container,
-    #programming-container,
+    #outdoors-container,
     #cooking-container {
-        border: 
+        border: 2px solid var(--bs-border-color) !important;
+        border-right: none !important; 
     }
 
+    #programming-container,
     #outdoors-image-container,
-    #programming-image-container,
     #cooking-image-container {
-        border: 0px !important;
-    } */
+        border-right: 2px solid var(--bs-border-color) !important;
+    }
+
+    #programming-image-container {
+        border-left: 2px solid var(--bs-border-color) !important;
+    }
     
 
     .card {
