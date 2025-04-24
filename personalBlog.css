@@ -11,6 +11,7 @@ article.active {
     animation: fade 0.5s ease backwards;
 }
 
+
 #btn-back-to-top {
     display: none;
 }
@@ -33,9 +34,6 @@ article.active {
 
 /* Contacts */
 
-.form-control {
-    field-sizing: content;
-}
 
 #submitButton {
     justify-self: end;
@@ -66,6 +64,59 @@ article.active {
 .recipe-border.active,
 .recipe-border:hover {
     background-color: beige;
+}
+
+
+#intro-image {
+    aspect-ratio: 1;
+    background: url(./images/personal-photo.jpg) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#outdoors-image {
+    background: url(./images/outdoors.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#programming-image {
+    background: url(./images/programming.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#cooking-image {
+    background: url(./images/cooking.jpg) 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* Cooking */
+
+
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-text {
+    text-indent: 2ch;
+}
+
+.full-recipe {
+    display: none !important;
+}
+
+.full-recipe>div>div>img {
+    aspect-ratio: 16/9;
+}
+
+.full-recipe.active {
+    display: flex !important;
+    animation: fade 1s ease backwards;
 }
 
 @media screen and (min-width:320px) {
@@ -149,60 +200,28 @@ article.active {
     }
 }
 
-@media screen and (min-width:1200px) {}
-
-@media screen and (min-width:1400px) {}
-
-#intro-image {
-    aspect-ratio: 1;
-    background: url(./images/personal-photo.jpg) 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
+@media screen and (min-width:1200px) {
+    
+    .card {
+    min-height: 25vw !important;
+    max-height: 25vw !important;
 }
 
-#outdoors-image {
-    background: url(./images/outdoors.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
+.card-img-top {
+    min-height: 13vw !important;
+    max-height: 13vw !important;
+}
 }
 
-#programming-image {
-    background: url(./images/programming.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-}
+@media screen and (min-width:1400px) {
+    
+    .card {
+        min-height: 18vw !important;
+        max-height: 18vw !important;
+    }
 
-#cooking-image {
-    background: url(./images/cooking.jpg) 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-}
-
-
-/* Cooking */
-
-
-
-.card:hover {
-    cursor: pointer;
-}
-
-
-
-.card-text {
-    text-indent: 2ch;
-}
-
-.full-recipe {
-    display: none !important;
-}
-
-.full-recipe>div>div>img {
-    aspect-ratio: 16/9;
-}
-
-.full-recipe.active {
-    display: flex !important;
-    animation: fade 1s ease backwards;
+    .card-img-top {
+        min-height: 10vw !important;
+        max-height: 10vw !important;
+    }
 }
