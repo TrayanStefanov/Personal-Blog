@@ -83,6 +83,7 @@ for (let i = 0; i < aboutlinks.length; i++) {
 
 /* Recipe - extension */
 
+
 const cards = document.querySelectorAll("[data-recipe]");
 const recipes = document.querySelectorAll("[data-recipe-full]");
 const recipesHeader = document.getElementById("recipeHeader");
@@ -113,13 +114,13 @@ for (let i = 0; i < cards.length; i++) {
 
 /* Outdoor read more toggle */
 
-const outdoors = document.getElementsByClassName("read-more");
-const outdoorsFull = document.getElementsByClassName("outdoor-article-full");
+const outdoors = $('.read-more');
+const outdoorsFull = $(".outdoor-article-full");
 
 for (let i = 0; i < outdoors.length; i++) {
-    outdoors[i].addEventListener("click", function () {
-        outdoors[i].classList.add("d-none");
-        outdoorsFull[i].classList.remove("d-none");
+    $(outdoors[i]).click(function () {
+        $(outdoors[i]).slideUp("slow");
+        $(outdoorsFull[i]).slideDown("slow");
     });
 }
 
