@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 /* Page Navigation */
 
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const navLinks = $("[data-nav-link]");
+const pages = $("[data-page]");
 
 for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click", function () {
+    $(navLinks[i]).click(function () {
         for (let j = 0; j < pages.length; j++) {
             if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
                 pages[j].classList.add("active");
@@ -62,11 +62,11 @@ for (let i = 0; i < navLinks.length; i++) {
     });
 }
 
-const aboutlinks = document.querySelectorAll("[data-about-link]");
+const aboutlinks = $("[data-about-link]");
 
 
 for (let i = 0; i < aboutlinks.length; i++) {
-    aboutlinks[i].addEventListener("click", function () {
+    $(aboutlinks[i]).click(function () {
         for (let j = 0; j < pages.length; j++) {
             if (this.dataset.aboutLink === pages[j].dataset.page) {
                 pages[j].classList.add("active");
