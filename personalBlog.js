@@ -20,16 +20,16 @@ backToTop.addEventListener("click", () => {
 });
 
 /* Theme toggle */
-document.addEventListener("DOMContentLoaded", (event) => {
+$(document).ready(function () {
     const htmlElement = document.documentElement;
-    const switchElement = document.getElementById("darkModeSwitch");
+    const switchElement = $("#darkModeSwitch");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const currentTheme = localStorage.getItem("bsTheme") || (prefersDarkScheme ? "dark" : "light");
 
     htmlElement.setAttribute("data-bs-theme", currentTheme);
     switchElement.checked = currentTheme === "dark";
 
-    switchElement.addEventListener("change", function () {
+    switchElement.change(function () {
         const newTheme = this.checked ? "dark" : "light";
         let newText = "";
         htmlElement.setAttribute("data-bs-theme", newTheme);
