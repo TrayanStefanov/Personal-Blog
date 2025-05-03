@@ -84,12 +84,12 @@ for (let i = 0; i < aboutlinks.length; i++) {
 /* Recipe - extension */
 
 
-const cards = document.querySelectorAll("[data-recipe]");
-const recipes = document.querySelectorAll("[data-recipe-full]");
-const recipesHeader = document.getElementById("recipeHeader");
+const cards = $("[data-recipe]");
+const recipes = $("[data-recipe-full]");
+const recipesHeader = $("#recipeHeader");
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", function () {
+    $(cards[i]).click(function () {
         for (let j = 0; j < recipes.length; j++) {
             if (this.dataset.recipe === recipes[j].dataset.recipeFull) {
                 if (this.parentElement.parentElement.classList.contains("active")) {
