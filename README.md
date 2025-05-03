@@ -1,5 +1,3 @@
 # Personal Blog site.
 
-    Used the least amount of CSS and JS possible to showcase the power of BS5.
-    Initial version is up and running. Responsive resizing is complete.
-    I have plans to revisit it at a later date.
+    A fork of the original project to play around with jquery. Cutting back on BS5 to use the maximum ammount of jquery.
