@@ -21,22 +21,22 @@ backToTop.addEventListener("click", () => {
 
 /* Theme toggle */
 $(document).ready(function () {
-    const htmlElement = document.documentElement;
+    const htmlElement = $(document.documentElement);
     const switchElement = $("#darkModeSwitch");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const currentTheme = localStorage.getItem("bsTheme") || (prefersDarkScheme ? "dark" : "light");
 
-    htmlElement.setAttribute("data-bs-theme", currentTheme);
+    htmlElement.attr("data-bs-theme", currentTheme);
     switchElement.checked = currentTheme === "dark";
 
     switchElement.change(function () {
         const newTheme = this.checked ? "dark" : "light";
         let newText = "";
-        htmlElement.setAttribute("data-bs-theme", newTheme);
+        htmlElement.attr("data-bs-theme", newTheme);
         if (newTheme == "dark") {
             newText = "Light Mode";
         } else { newText = "Dark Mode"; }
-        document.getElementById("darkModeSwitch-text").innerHTML = newText;
+        $("#darkModeSwitch-text").innerHTML = newText;
         localStorage.setItem("bsTheme", newTheme);
     });
 })
