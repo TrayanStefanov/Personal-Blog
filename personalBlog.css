@@ -11,6 +11,9 @@ article.active {
     animation: fade 0.5s ease backwards;
 }
 
+p {
+    text-indent: 2ch;
+}
 
 #btn-back-to-top {
     display: none;
